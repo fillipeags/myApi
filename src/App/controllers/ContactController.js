@@ -1,6 +1,6 @@
 class ContactController {
   index(request, response) {
-    response.send('Hello World ');
+    response.send('Hello world');
   }
 
   show() {
