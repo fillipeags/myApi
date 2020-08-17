@@ -8,11 +8,24 @@ const contacts = [
     phone: '707070707',
     category_id: v4(),
   },
+  {
+    id: v4(),
+    name: 'Julia',
+    email: 'julia@gmail.com',
+    phone: '45445454',
+    category_id: v4(),
+  },
 ];
 
 class ContactsRepository {
   findAll() {
     return new Promise((resolve) => resolve(contacts));
+  }
+
+  findById(id) {
+    return new Promise((resolve) => resolve(
+      contacts.find((contact) => contact.id === id),
+    ));
   }
 }
 
